@@ -1,0 +1,86 @@
+html { height: 100%; }
+body { min-height: 100%; }
+
+.grid {  /* separate class for grid */
+  display: grid;
+}
+
+.navbar {
+  grid-template-columns: 20rem 1fr 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-wrapper {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10% 70% 20%;
+  background-color: gray;
+  height: 20rem;
+}
+
+.landing__description {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+}
+
+.landing__title {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__buttons {
+  grid-column: 1/2;
+  grid-row:3/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3rem auto 3rem;
+  grid-gap: 5px;
+  background-color: lime;
+}
+
+.article > header {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.article > div {
+  height: 13rem;
+  width: 90%;
+  margin: auto;
+}
+
+.article > div:nth-child(2) {
+  background-color: white;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.article > div:nth-child(3) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: white;
+}
+
+.article > div:nth-child(4) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-color: white;
+}
+
+.article > div:nth-child(5) {
+  grid-column: 4/-1;
+  grid-row: 2/3;
+  background-color: white;
+}

@@ -10,13 +10,14 @@ body { min-height: 100%; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 4rem;
 }
 
 .landing-wrapper {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 10% 70% 20%;
   background-color: gray;
-  height: 20rem;
+  height: 25rem;
 }
 
 .landing__description {
@@ -45,40 +46,27 @@ body { min-height: 100%; }
 
 .article {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(6, auto);
   grid-auto-flow: dense;
   grid-gap: 2rem;
   padding: 1rem;
   background-color: #eee;
+  padding: 3rem 6rem;
 }
 
-.article > header {
+.article > .header--one {
   grid-column: 1/2;
   grid-row: 1/2;
 }
 
 .article > div {
   height: 19rem;
+  background-color: white; /**refactor**/
 }
 
-.article > div:nth-child(2) {
-  background-color: white;
+.article__card--one {
+  /** refactor **/
   grid-row: 2/3;
-}
-
-.article > div:nth-child(3) {
-  grid-row: 2/3;
-  background-color: white;
-}
-
-.article > div:nth-child(4) {
-  grid-row: 2/3;
-  background-color: white;
-}
-
-.article > div:nth-child(5) {
-  grid-row: 2/3;
-  background-color: white;
 }
 
 /* nested grid */
@@ -89,6 +77,7 @@ body { min-height: 100%; }
   grid-template-rows: 60% 5% 5% 10% 20% ;
   grid-gap: 0.2rem;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .article__card > img:nth-child(1) {
@@ -102,7 +91,8 @@ body { min-height: 100%; }
 
 .article__card > p:nth-child(2) {
   font-weight: bold;
-  font-family: arial;
+  font-family: '3dumbregular', Arial, sans-serif;
+  font-family: '3dumbregular';
   font-size: 0.9em;
   grid-row: 2/4;
   padding: 0.5rem;
@@ -120,4 +110,26 @@ body { min-height: 100%; }
   font-size: 0.9em;
   grid-row: 5/6;
   padding: 0.7rem 0.5rem;
+}
+
+/*copy and paste 2 more identical articles*/
+
+/*voyage 2*/
+.article > .header--two {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.article__card--two {
+ grid-row: 5/6;
+}
+
+/*voyage 3 */
+.article > .header--three {
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
+
+.article__card--three {
+ grid-row: 8/9;
 }

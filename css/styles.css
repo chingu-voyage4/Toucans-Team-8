@@ -46,12 +46,12 @@ body { min-height: 100%; }
 
 .article {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(9, auto);
   grid-auto-flow: dense;
   grid-gap: 2rem;
   padding: 1rem;
   background-color: #eee;
-  padding: 3rem 6rem;
+  padding: 3rem 4rem;
 }
 
 .article > .header--one {
@@ -132,4 +132,14 @@ body { min-height: 100%; }
 
 .article__card--three {
  grid-row: 8/9;
+}
+
+/*resources */
+.article > .header--four {
+  grid-column: 1/2;
+  grid-row: 9/10;
+}
+
+.article__card--four {
+ grid-row: 10/11;
 }

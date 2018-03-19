@@ -1,6 +1,10 @@
 html { height: 100%; }
 body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 
+/*font controller*/
+.section--title{font-size: 1.125rem;}
+.section--note{font-size: 1.063rem;}
+.section--description{font-size: 0.875rem;}
 
 .grid {  /* separate class for grid */
   display: grid;

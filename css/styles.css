@@ -1,5 +1,6 @@
 html { height: 100%; }
-body { min-height: 100%; }
+body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
+
 
 .grid {  /* separate class for grid */
   display: grid;
@@ -28,7 +29,7 @@ body { min-height: 100%; }
 .box-shadow-menu:before {
   content: "";
   position: absolute;
-  left: 1.8rem;;
+  left: 1.8rem;
   top: 0.25em;
   width: 1em;
   height: 0.15em;

@@ -1,12 +1,33 @@
-html { height: 100%; }
-body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font: 0.875rem 'Roboto', Arial, sans-serif;
+}
+
+.wrapper {
+  transition: all 0.5s ease-in-out;
+}
+.wrapper-right {
+  transform: translateX(14rem);
+  transition: all 0.5s ease-in-out;
+}
 
 /*font controller*/
-.section--title{font-size: 1.125rem;}
-.section--note{font-size: 1.063rem;}
-.section--description{font-size: 0.875rem;}
+.section--title {
+  font-size: 1.125rem;
+}
+.section--note {
+  font-size: 1.063rem;
+}
+.section--description {
+  font-size: 0.875rem;
+}
 
-.grid {  /* separate class for grid */
+/* separate class for grid */
+.grid {
   display: grid;
 }
 
@@ -31,20 +52,18 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 }
 
 .box-shadow-menu:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 1.8rem;
   top: 0.25em;
   width: 1em;
   height: 0.15em;
   background: black;
-  box-shadow:
-    0 0.25em 0 0 black,
-    0 0.5em 0 0 black;
+  box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black;
 }
 
-.landing-wrapper::before{
-  content: "";
+.landing-wrapper::before {
+  content: '';
   grid-column: 1/-1;
   grid-row: 1/-1;
   max-width: 100%;
@@ -86,7 +105,7 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 
 .landing__buttons {
   grid-column: 1/2;
-  grid-row:3/-1;
+  grid-row: 3/-1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +119,23 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
   font-size: 0.8em;
 }
 
+/** Side Menu CSS Start**/
+.side-menu-wrapper {
+  width: 14rem;
+  height: 100vh;
+  background-color: gray;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -14rem;
+}
+
+.side-menu-show {
+  transform: translateX(0rem);
+}
+
+/** Side Menu CSS End**/
 .article {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
   grid-template-rows: repeat(10, auto);
@@ -130,10 +166,10 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
   background-color: white;
   height: 20em;
   grid-template-columns: 1fr;
-  grid-template-rows: 60% 5% 5% 10% 20% ;
+  grid-template-rows: 60% 5% 5% 10% 20%;
   grid-gap: 0.2rem;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .article__card > img:nth-child(1) {
@@ -177,7 +213,7 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 }
 
 .article__card--two {
- grid-row: 5/6;
+  grid-row: 5/6;
 }
 
 /*voyage 3 */
@@ -187,7 +223,7 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 }
 
 .article__card--three {
- grid-row: 8/9;
+  grid-row: 8/9;
 }
 
 /*resources */
@@ -197,7 +233,7 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 }
 
 .article__card--four {
- grid-row: 10/11;
+  grid-row: 10/11;
 }
 
 .article > .load-more {
@@ -215,7 +251,7 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
 
 /* footer */
 .footer {
-  grid-template-columns: 12rem 1fr 1fr;
+  grid-template-columns: 16rem 1fr 1fr;
   grid-template-rows: repeat(4, auto);
   grid-gap: 1rem;
   padding: 3rem 2rem;
@@ -253,7 +289,8 @@ body {min-height: 100%; font: 0.875rem "Roboto", Arial, sans-serif;}
   padding-right: 0.6rem;
 }
 
-.footer__links > li > a, .social-links > li > a {
+.footer__links > li > a,
+.social-links > li > a {
   text-decoration: none;
   background-color: none;
   color: black;

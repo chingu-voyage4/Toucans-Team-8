@@ -55,27 +55,47 @@ body {
   height: 4rem;
 }
 
+.navbar__logo {
+  background: url("../images/assets.png");
+  height: 3.1rem;
+  width: 10.2rem;
+}
+
 .navbar__social {
   padding-right: 1rem;
 }
 
 .box-shadow-menu {
   position: relative;
-  padding-left: 3.8rem;
+  padding-left: 4rem;
   text-decoration: none;
-  background-color: none;
+  background-color: transparent;
   color: black;
+  transition: all 0.3s ease;
+}
+
+.box-shadow-menu:hover {
+  color: #f75830;
+  transition: all 0.3s ease;
 }
 
 .box-shadow-menu:before {
   content: '';
   position: absolute;
-  left: 1.8rem;
-  top: 0.25em;
+  left: 2rem;
+  top: 0.4em;
   width: 1em;
   height: 0.15em;
   background: black;
-  box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black;
+  box-shadow: 0 0.30em 0 0 black, 0 0.6em 0 0 black;
+  transition: all 0.2s;
+}
+
+.box-shadow-menu:hover:before {
+  top: 0.2em;
+  background: #f75830;
+  box-shadow: 0 0.45em 0 0 #f75830, 0 0.9em 0 0 #f75830;
+  transition: all 0.2s;
 }
 
 .landing-wrapper {
@@ -369,6 +389,13 @@ body {
 .footer__links > li > a,
 .social-links > li > a {
   text-decoration: none;
-  background-color: none;
+  background-color: transparent;
   color: black;
+  transition: all 0.2s ease;
+}
+
+.footer__links > li > a:hover,
+.social-links > li > a:hover {
+  color: #f75830;
+  transition: all 0.2s ease;
 }

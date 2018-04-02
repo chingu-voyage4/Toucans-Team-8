@@ -190,7 +190,45 @@ body {
   border: 1px solid #fff;
 }
 
-/** Side Menu CSS Start**/
+.landing_navigation {
+  grid-column: 4/4;
+  grid-row: 3/-1;
+  display: flex;
+  padding-right: 2rem;
+  align-items: center;
+}
+
+.landing_nav {
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.landing_nav:after {
+  display: block;
+  content: '';
+  height: 10px;
+  width: 10px;
+  margin-top: 8px;
+  margin-left: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.landing_nav.nav--prev:after {
+  transform:  rotate(-135deg);
+  margin-left: 9px;
+}
+
+.landing_nav.nav--next:after {
+  transform: rotate(45deg);
+}
+
+/** Filter CSS Start**/
 .filter-wrapper {
   grid-template-columns: 10rem 11rem 1fr 6rem;
   justify-content: space-between;
@@ -318,7 +356,7 @@ body {
   background-position: 0px 14px;
 }
 
-/** Side Menu CSS End**/
+/** Filter CSS End**/
 
 /** Side Menu CSS Start**/
 .side-menu-wrapper {
@@ -349,6 +387,14 @@ body {
 
 .articleCt {
   grid-template-rows: repeat(3, auto);
+}
+
+.article--site {
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 3rem;
+  background-color: #eee;
+  padding: 3rem 20rem;
 }
 
 .article header {
@@ -491,6 +537,43 @@ body {
 }
 .article__card--ctfour {
   grid-row: 4/5;
+}
+
+.article__card--mid {
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.article__card--credit {
+  height: 80px;
+  align-content: center;
+  text-align: left;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  background-color: white;
+  border: 1px solid #e6eaea;
+}
+
+.article__card--credit:nth-child(1) {
+  border-bottom:  none;
+  padding-left: 2rem;
+}
+
+.article__card--developers {
+  height: 80px;
+  border: 1px solid #eaeaea;
+  padding-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.article__card--developers p {
+  width: 100%;
+}
+
+.credit--location {
+  color: #64686A;
 }
 
 /* footer */

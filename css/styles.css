@@ -146,7 +146,7 @@ body {
 }
 
 .landing__title {
-  grid-column: 1/-1;
+  grid-column: 1/5;
   grid-row: 2/3;
   display: flex;
   flex-direction: column;
@@ -455,6 +455,7 @@ body {
 
 .articleCt {
   grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, minmax(220px, 1fr)); /*NOTE: Adjust this according to viewport*/
 }
 
 .article--site {
@@ -584,26 +585,12 @@ body {
   background-color: white;
   color: gray;
   font-size: 0.8em;
-  font-family: Arial;
   grid-column: 1/-1;
   grid-row: 12/13;
   height: 2rem;
   justify-self: center;
   text-align: center;
   width: 8rem;
-}
-
-.article__card--ctone {
-  grid-row: 1/2;
-}
-.article__card--cttwo {
-  grid-row: 2/3;
-}
-.article__card--ctthree {
-  grid-row: 3/4;
-}
-.article__card--ctfour {
-  grid-row: 4/5;
 }
 
 .article__card--whole {
@@ -615,11 +602,15 @@ body {
   text-align: center;
 }
 
+.article__card--whole p {
+  margin-bottom: 10px;
+}
+
 .article__card--credit {
   height: 80px;
   align-content: center;
   text-align: left;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   background-color: white;
   border: 1px solid #e6eaea;
 }

@@ -393,11 +393,24 @@ body {
   justify-self: center;
   align-self: center;
 }
+
 .side-menu__links {
   align-self: center;
   padding-left: 1rem;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+.side-menu__button > a,
+.side-menu__links > a {
+  text-decoration: none;
+  color: black;
+}
+
+.side-menu__button > a:hover,
+.side-menu__links > a:hover {
+  color: #f75830;
+  transition: all 0.3s ease;
 }
 
 .side-menu-wrapper > div:nth-child(3) {
@@ -455,7 +468,10 @@ body {
 
 .articleCt {
   grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(4, minmax(220px, 1fr)); /*NOTE: Adjust this according to viewport*/
+  grid-template-columns: repeat(
+    4,
+    minmax(220px, 1fr)
+  ); /*NOTE: Adjust this according to viewport*/
 }
 
 .article--site {

@@ -28,3 +28,8 @@ const closeMenu = _ => {
 // adding event listeners to buttons and testing whether console.log appears in browser
 navMenuButton.addEventListener('click', openMenu)
 closeMenuButton.addEventListener('click', closeMenu)
+
+//Toggle function for category pages
+$("#toggleFilter").on('click', function(){
+  $(".filter--select-option").toggleClass('toggled')
+})

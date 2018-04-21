@@ -13,4 +13,4 @@ Batch: Voyage-4
 * Add links to the project site and their github
 
 ## Site Link
-* https://chingu-projects.herokuapp.com/
+* https://voyage-chingu.herokuapp.com

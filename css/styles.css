@@ -116,7 +116,7 @@ body {
   display: block;
   width: 100%;
   height: 35rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   position: absolute;
   z-index: -2;
 }
@@ -139,6 +139,10 @@ body {
   color: white;
   font-size: 1.063rem;
   padding-left: 2rem;
+}
+
+.landing__description strong {
+  margin-right: 5px;
 }
 
 .landing__description > p {
@@ -245,14 +249,8 @@ body {
   color: #202121;
 }
 
-.filter--note:before {
-  display: inline-block;
-  content: '';
-  width: 20px;
-  height: 20px;
-  background: url('../images/assets.png');
-  background-position: -2px 40px;
-  margin-right: 13px;
+.filter--note p {
+  margin-left: 13px;
 }
 
 .filter--select {
